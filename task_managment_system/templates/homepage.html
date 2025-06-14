@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Навигация</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --background-color: #ecf0f1;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        nav {
+            background: linear-gradient(90deg, var(--primary-color), #1a252f);
+            display: flex;
+            justify-content: flex-end;
+            padding: 14px 24px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                margin-left: 20px;
+                font-weight: 600;
+                font-size: 16px;
+                transition: color 0.2s, transform 0.2s;
+            }
+
+                nav a:hover {
+                    color: var(--accent-color);
+                    transform: scale(1.05);
+                }
+
+        .content {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+            .content h1 {
+                font-size: 32px;
+                margin-bottom: 10px;
+                color: var(--primary-color);
+            }
+
+            .content p {
+                font-size: 18px;
+                color: #555;
+            }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+                nav a {
+                    margin: 8px 0;
+                }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/myprofile">Мой профиль</a>
+        <a href="/myprojects">Мои проекты</a>
+        <a href="/logout">Выход</a>
+    </nav>
+
+    <div class="content">
+        <h1>Добро пожаловать в систему управления задачами</h1>
+        <p>Выберите раздел в меню выше, чтобы начать работу.</p>
+    </div>
+
+</body>
+</html>
+
+

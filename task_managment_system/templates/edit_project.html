@@ -1,0 +1,22 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+<h3>Редактирование проекта</h3>
+
+<form method="POST">
+    <div>
+        <label for="name">Название проекта:</label>
+        <input type="text" name="name" value="{{ project.name }}" required><br>
+    </div>
+    <div>
+        <label for="description">Описание проекта:</label>
+        <textarea name="description" required>{{ project.description }}</textarea><br>
+    </div>
+    <div>
+        <label for="invite_code">Код для приглашения:</label>
+        <input type="text" name="invite_code" value="{{ project.invite_code }}" required><br>
+    </div>
+    <button type="submit">Сохранить изменения</button>
+</form>
+
+{% endblock %}

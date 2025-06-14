@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Навигация</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 12px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                margin-left: 15px;
+                font-weight: bold;
+            }
+
+                nav a:hover {
+                    text-decoration: underline;
+                }
+
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/logout">Выход</a>
+        <a href="/myprojects">Мои проекты</a>
+        <a href="/myprofile">Мой профиль</a>
+        <a href="/audit">Аудит</a>
+    </nav>
+
+    <div class="content">
+        <h1>Мой аудит</h1>
+        <p>Выберите</p>
+    </div>
+    <script src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>

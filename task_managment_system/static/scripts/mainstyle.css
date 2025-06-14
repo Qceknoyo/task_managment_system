@@ -1,0 +1,128 @@
+body {
+    background: url("images/white-paper-texture.jpg");
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+label[for="array"] {
+    display: block;
+    margin-bottom: 10px; /* Опустить подпись над полем ввода */
+}
+
+input[type = "number"] {
+    width: 245px !important
+}
+
+input#array {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 20px; /* Добавить отступ */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input#size {
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 20px; /* Добавить отступ */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 30px; /* Опустить ссылки */
+}
+
+button {
+    background-color: #505;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+table {
+    width: 600px;
+    border-top: 7px solid #505;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #505;
+}
+
+td {
+    text-align: left;
+    padding: 10px;
+    border: 3px solid #505;
+}
+
+h6 {
+    text-align: center;
+    color: aliceblue;
+    font-size: 1.7rem;
+}
+
+.button-container {
+    display: flex; /* Arrange buttons horizontally */
+    gap: 20px; /* Space between buttons (adjust as needed) */
+    justify-content: center; /* Center buttons horizontally */
+}
+
+.buttonenter {
+    display: inline-block; /* Make it a block element, but inline */
+    padding: 10px 20px; /* Adjust padding for size */
+    font-size: 16px; /* Set font size */
+    color: white; /* White text color */
+    background-color: #007bff; /* Blue background color (example) */
+    border: none; /* Remove border */
+    border-radius: 20px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    text-align: center; /* Center the text */
+    min-width: 80px; /* Minimum width to ensure consistent size */
+}
+
+    .buttonenter:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+toolbar_menu {
+    background-color: #333;
+    padding: 12px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+    toolbar_menu a {
+        color: white;
+        text-decoration: none;
+        margin-left: 15px;
+        font-weight: bold;
+    }
+
+        toolbar_menu a:hover {
+            text-decoration: underline;
+        }

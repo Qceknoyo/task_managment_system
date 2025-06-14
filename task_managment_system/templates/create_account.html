@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <style>
+        .error-message {
+            color: red;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid red;
+            background-color: #ffeeee;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(0,0,46)">
+    <h6 class="text-center">Система управления задач</h6>
+    <div class="container">
+        <div class="header">
+            <h3 class="text-center">Давайте работать вместе!</h3>
+        </div>
+
+        <!-- Блок для ошибки -->
+        {% if error %}
+        <div class="error-message">{{ error }}</div>
+        {% endif %}
+
+        <form method="POST" action="/SignUp">
+            <label for="Email">Email:</label><br>
+            <input type="email" id="Email" name="Email" required
+                   value="{{ request.form.Email if request.form.Email }}"><br><br>
+
+            <label for="login">Логин:</label><br>
+            <input type="text" id="login" name="login" required
+                   value="{{ form_data.login if form_data }}"><br><br>
+
+            <label>ФИО:</label><br>
+            <input type="text" name="full_name" required
+                   value="{{ form_data.full_name if form_data }}"><br><br>
+
+            <label>Телефон:</label><br>
+            <input type="tel" name="phone" required
+                   value="{{ form_data.phone if form_data }}"><br><br>
+
+            <label for="password">Пароль (минимум 6 символов):</label><br>
+            <input type="password" id="password" name="password" required minlength="6"><br><br>
+
+            <label for="password_repeat">Повторите пароль:</label><br>
+            <input type="password" id="password_repeat" name="password_repeat" required minlength="6"><br><br>
+
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+
+        <div class="text-center">
+            <h3>Уже есть аккаунт? <a href="/Login">Войти</a></h3>
+        </div>
+    </div>
+</body>
+</html>
